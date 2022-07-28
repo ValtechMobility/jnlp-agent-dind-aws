@@ -1,4 +1,3 @@
-
 FROM jenkins/inbound-agent:alpine as jnlp
 
 FROM docker:20.10.17-dind-alpine3.16
