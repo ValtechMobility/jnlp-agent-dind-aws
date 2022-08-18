@@ -8,7 +8,6 @@ RUN set -ex && apk add --no-cache make git gcc libc-dev curl bash && \
     cd /go/src/github.com/session-manager-plugin && \
     echo ${VERSION} > VERSION && \
     sed -i s/1.2.0.0/${VERSION}/g /go/src/github.com/session-manager-plugin/src/version/version.go && \
-    make checkstyle && \
     make build-linux-amd64
 
 FROM jenkins/inbound-agent:alpine as jnlp
