@@ -1,4 +1,4 @@
-FROM golang:alpine as builder
+FROM golang:1.15-alpine3.14 as builder
 ARG VERSION=1.2.339.0
 RUN set -ex && apk add --no-cache make git gcc libc-dev curl bash && \
     curl -sLO https://github.com/aws/session-manager-plugin/archive/refs/tags/${VERSION}.tar.gz && \
