@@ -13,7 +13,7 @@ RUN set -ex && apk add --no-cache make git gcc libc-dev curl bash && \
 
 FROM jenkins/inbound-agent:alpine as jnlp
 
-FROM docker:20.10.17-dind-alpine3.16
+FROM docker:20.10.18-dind-alpine3.16
 
 RUN apk add --no-cache openjdk11-jre git curl bash aws-cli
 RUN curl -L https://git.io/get_helm.sh | bash -s -- --version v3.8.2
